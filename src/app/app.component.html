@@ -1,0 +1,13 @@
+
+<div class="container" style="margin: 100px;">
+    <h1>  Internationalization </h1>
+    <h1>(myFunction())</h1>
+    <h2> {{'HOME.TITLE' | translate}} </h2>
+    <P> {{'HOME.TEXT' | translate}}  </P>
+    <label for="">
+        {{'HOME.SELECT' | translate}} 
+    <select #langselect (change)="translate.use(langselect.value )">
+        <option *ngFor = "let lang of translate.getLangs()" [value]="lang">{{lang}}</option>
+    </select>
+</label>
+</div>
